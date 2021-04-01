@@ -17,6 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: <%= ENV['LEARNING_TRACKIFY_1_0_DATABASE_USER'] %>
+  password: <%= ENV['LEARNING_TRACKIFY_1_0_DATABASE_PASSWORD'] %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -81,5 +83,6 @@ test:
 production:
   <<: *default
   database: learning_trackify_1_0_production
-  username: learning_trackify_1_0
+  # username: learning_trackify_1_0
+  username: <%= ENV['LEARNING_TRACKIFY_1_0_DATABASE_USER'] %>
   password: <%= ENV['LEARNING_TRACKIFY_1_0_DATABASE_PASSWORD'] %>
