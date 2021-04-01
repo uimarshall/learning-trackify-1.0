@@ -15,6 +15,12 @@ gem 'puma', '~> 4.1'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# Use 'jwt' for authentication
+gem 'jwt'
+# gem "rack-cors"
+# Use faker for fake data
+gem 'faker', git: 'https://github.com/stympy/faker'
+
 
 # Use figaro to set ENV variables
 # gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
