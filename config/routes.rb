@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  # root 'home#index'
    namespace :api do
     namespace :v1 do
       get 'courses/mine', to: 'courses#my_courses'
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
     end  
   end
   # If a non-existed route is requested for,route back to index page
-  get '*path', to: 'home#index', via: :all
+  # get '*path', to: 'home#index', via: :all
 end
