@@ -4,7 +4,7 @@ import { SignUpFailure, signUpOk } from '../actions';
 
 export const signUpThunk = ({
   name, email, password, passwordConfirmation,
-}) => dispatch => {
+}) => (dispatch) => {
   axios
     .post(
       '/api/v1/signup',
@@ -16,29 +16,29 @@ export const signUpThunk = ({
       },
       { withCredentials: true },
     )
-    .then(response => {
+    .then((response) => {
       if (response.status === 201) {
         Storage.setToken(response.data.auth_token);
         dispatch(signUpOk(response.data));
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       dispatch(SignUpFailure(error.response.data));
     });
 };
 
-export const logInThunk = ({ email, password }) => dispatch => {
+export const logInThunk = ({ email, password }) => (dispatch) => {
   axios
     .post('/api/v1/auth/login', { email, password }, { withCredentials: true })
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         Storage.setToken(response.data.auth_token);
         dispatch(signUpOk(response.data));
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       dispatch(SignUpFailure(error.response.data));
     });
 };

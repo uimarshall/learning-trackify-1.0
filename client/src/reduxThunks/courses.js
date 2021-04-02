@@ -6,7 +6,7 @@ import {
   mySubjectsOk, mySubjectsBad, mySubjectsLoading,
 } from '../actions';
 
-export const subjectsThunk = () => dispatch => {
+export const subjectsThunk = () => (dispatch) => {
   dispatch(subjectsLoading());
 
   axios
@@ -19,19 +19,19 @@ export const subjectsThunk = () => dispatch => {
       },
       { withCredentials: true },
     )
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         dispatch(subjectsOk(response.data));
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       Storage.checkToken(error);
       dispatch(subjectsBad(error.response.data));
     });
 };
 
-export const mySubjectsThunk = () => dispatch => {
+export const mySubjectsThunk = () => (dispatch) => {
   dispatch(mySubjectsLoading());
   dispatch(statisticsLoadingSubjects());
   axios
@@ -44,21 +44,21 @@ export const mySubjectsThunk = () => dispatch => {
       },
       { withCredentials: true },
     )
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         dispatch(mySubjectsOk(response.data));
         dispatch(statisticsSubjects(response.data.length));
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       Storage.checkToken(error);
       dispatch(mySubjectsBad(error.response.data));
       dispatch(statisticsSubjects(0));
     });
 };
 
-export const subjectRegisterThunk = subject => () => axios
+export const subjectRegisterThunk = (subject) => () => axios
   .post(
     '/api/v1/register_course',
     {
@@ -71,13 +71,7 @@ export const subjectRegisterThunk = subject => () => axios
     },
     { withCredentials: true },
   )
-  .then(response => {
-    if (response.status === 200) {
-     
-    }
-    return response.data;
-  })
-  .catch(error => {
+  .then((response) => response.data)
+  .catch((error) => {
     Storage.checkToken(error);
-   
   });

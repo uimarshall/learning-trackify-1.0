@@ -7,7 +7,7 @@ import {
   myMeasurementsOk, myMeasurementsBad, myMeasurementsLoading,
 } from '../actions';
 
-export const deleteMeasureThunk = ({ id, courseId }) => dispatch => {
+export const deleteMeasureThunk = ({ id, courseId }) => (dispatch) => {
   dispatch(measureLoading());
   return axios
     .delete(
@@ -19,13 +19,13 @@ export const deleteMeasureThunk = ({ id, courseId }) => dispatch => {
       },
       { withCredentials: true },
     )
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         dispatch(newMeasure());
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       Storage.checkToken(error);
       dispatch(measureBad());
     });
@@ -33,7 +33,7 @@ export const deleteMeasureThunk = ({ id, courseId }) => dispatch => {
 
 export const updateMeasureThunk = ({
   id, units, courseId, dateM,
-}) => dispatch => {
+}) => (dispatch) => {
   dispatch(measureLoading());
   return axios
     .patch(
@@ -49,19 +49,19 @@ export const updateMeasureThunk = ({
       },
       { withCredentials: true },
     )
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         dispatch(measureOk(response.data));
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       Storage.checkToken(error);
       dispatch(measureBad());
     });
 };
 
-export const fetchMeasureThunk = ({ id, courseId }) => dispatch => {
+export const fetchMeasureThunk = ({ id, courseId }) => (dispatch) => {
   dispatch(measureLoading());
   return axios
     .get(
@@ -73,19 +73,19 @@ export const fetchMeasureThunk = ({ id, courseId }) => dispatch => {
       },
       { withCredentials: true },
     )
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         dispatch(measureOk(response.data));
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       Storage.checkToken(error);
       dispatch(measureBad());
     });
 };
 
-export const measureThunk = ({ units, courseId, dateM }) => dispatch => {
+export const measureThunk = ({ units, courseId, dateM }) => (dispatch) => {
   dispatch(measureLoading());
   return axios
     .post(
@@ -101,19 +101,19 @@ export const measureThunk = ({ units, courseId, dateM }) => dispatch => {
       },
       { withCredentials: true },
     )
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         dispatch(measureOk(response.data));
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       Storage.checkToken(error);
       dispatch(measureBad());
     });
 };
 
-export const measurementsThunk = courseId => dispatch => {
+export const measurementsThunk = (courseId) => (dispatch) => {
   dispatch(myMeasurementsLoading());
   dispatch(statisticsLoadingMeasurements());
   axios
@@ -126,21 +126,21 @@ export const measurementsThunk = courseId => dispatch => {
       },
       { withCredentials: true },
     )
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         dispatch(myMeasurementsOk(response.data));
         dispatch(statisticsMeasurements(response.data));
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       Storage.checkToken(error);
       dispatch(myMeasurementsBad(error.response.data));
       dispatch(statisticsMeasurementsBad());
     });
 };
 
-export const myMeasurementsThunk = date => dispatch => {
+export const myMeasurementsThunk = (date) => (dispatch) => {
   dispatch(myMeasurementsLoading());
   dispatch(statisticsLoadingMeasurements());
   axios
@@ -156,14 +156,14 @@ export const myMeasurementsThunk = date => dispatch => {
       },
       { withCredentials: true },
     )
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         dispatch(myMeasurementsOk(response.data));
         dispatch(statisticsMeasurements(response.data));
       }
       return response.data;
     })
-    .catch(error => {
+    .catch((error) => {
       Storage.checkToken(error);
       dispatch(myMeasurementsBad(error.response.data));
       dispatch(statisticsMeasurementsBad());
