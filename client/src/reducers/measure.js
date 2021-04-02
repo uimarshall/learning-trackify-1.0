@@ -1,9 +1,8 @@
 import defaultProps from '../dataStore/defaultProps';
 import {
-   MEASURE_OK, MEASURE_BAD, NEW_MEASURE, MEASURE_LOADING 
-  
-} from '../actions/actionTypes';
+  MEASURE_OK, MEASURE_BAD, NEW_MEASURE, MEASURE_LOADING,
 
+} from '../actions/actionTypes';
 
 const measureReducer = (measure = {}, { type, payload }) => {
   switch (type) {

@@ -1,6 +1,6 @@
 import {
-   MY_MEASUREMENTS_OK, MY_MEASUREMENTS_BAD, MY_MEASUREMENTS_LOADING
-  
+  MY_MEASUREMENTS_OK, MY_MEASUREMENTS_BAD, MY_MEASUREMENTS_LOADING,
+
 } from '../actions/actionTypes';
 
 const measurementReducer = (measurement = {}, { type, payload }) => {
