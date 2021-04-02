@@ -134,7 +134,7 @@ export function signUpOk(auth) {
   };
 }
 
-export function signUpBad(auth) {
+export function SignUpFailure(auth) {
   return {
     type: SIGN_UP_BAD,
     payload: auth,
