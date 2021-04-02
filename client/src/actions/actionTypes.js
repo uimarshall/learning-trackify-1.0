@@ -17,6 +17,6 @@ export const COURSES_OK = 'COURSES_OK';
 export const COURSES_BAD = 'COURSES_BAD';
 export const COURSES_LOADING = 'COURSES_LOADING';
 export const SIGN_UP_OK = 'SIGN_UP_OK';
-export const SIGN_UP_BAD = 'SIGN_UP_BAD';
+export const SIGN_UP_FAILURE = 'SIGN_UP_FAILURE';
 export const CLEAN_AUTH_MESSAGE = 'CLEAN_AUTH_MESSAGE';
 export const LOGOUT = 'LOGOUT';
