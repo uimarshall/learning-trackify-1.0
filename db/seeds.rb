@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create!(name: 'John', email: 'johnn@test.com', password: 'pass123', password_confirmation: 'pass123')
+user = User.create!(name: 'John', email: 'john@test.com', password: 'pass123', password_confirmation: 'pass123')
 
 courses = [
   ['https://learning-trackify.s3.eu-west-3.amazonaws.com/ruby.png', 'Ruby', 'A good career course'],
