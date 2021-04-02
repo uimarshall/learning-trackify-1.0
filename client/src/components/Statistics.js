@@ -66,7 +66,7 @@ function Statistics({
 
 Statistics.propTypes = {
   statistics: PropTypes.shape({
-    minutes: PropTypes.instanceOf(PropTypes.object),
+    minutes: PropTypes.arrayOf(PropTypes.object),
     subjects: PropTypes.instanceOf(PropTypes.object),
     measurements: PropTypes.instanceOf(PropTypes.object),
     loadingSubjects: PropTypes.bool,

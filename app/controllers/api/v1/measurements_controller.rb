@@ -12,38 +12,44 @@ module Api
 
       def my_measurements
         measurements = current_user.measurements.date_m(params[:date] || '')
-        render json: MeasurementSerializer.new(measurements).serialized_json
+        # render json: MeasurementSerializer.new(measurements).serialized_json
+         json_response(measurements)
       end
 
       # Show single measurement
 
       def show
-        render json: MeasurementSerializer.new(@measurement).serialized_json
+        # render json: MeasurementSerializer.new(@measurement).serialized_json
+        json_response(@measurement)
       end
 
       def create
         p params
         params = measurement_params
         params['user_id'] = current_user.id
-        measure = @course.measurements.new(params)
-        if measure.save
-          render json: MeasurementSerializer.new(measure).serialized_json
+        measure = @subject.measurements.create!(params)
+        json_response(measure, :created)
+        # measure = @course.measurements.new(params)
+        # if measure.save
+        #   render json: MeasurementSerializer.new(measure).serialized_json
 
-        else
-          render json: { error: measure.errors.messages }, status: 422
+        # else
+        #   render json: { error: measure.errors.messages }, status: 422
 
         end
         render json: MeasurementSerializer.new(measure, :created).serialized_json
       end
 
       def update
-        if @measurement.update(measurement_params)
-          render json: MeasurementSerializer.new(@measurement).serialized_json
+         @measurement.update(measurement_params)
+         head :no_content
+        # if @measurement.update(measurement_params)
+        #   render json: MeasurementSerializer.new(@measurement).serialized_json
 
-        else
-          render json: { error: @measurement.errors.messages }, status: 422
+        # else
+        #   render json: { error: @measurement.errors.messages }, status: 422
 
-        end
+        # end
       end
 
       def destroy
