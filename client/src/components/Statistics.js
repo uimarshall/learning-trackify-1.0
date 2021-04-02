@@ -24,10 +24,10 @@ function Statistics({
           progress={subjects.goal === 0 ? 100 : Math.floor((subjects.total * 100) / subjects.goal)}
           progressColor="#8EE289"
           textStyle={style}
-          textColor={colors.grayDark}
-          animate={true} // Boolean: Animated/Static progress
-  animationDuration="1s" //String: Length of animation
-  responsive={true} // Boolean: Make SVG adapt to parent size
+          textColor="#25bb32"
+          animate // Boolean: Animated/Static progress
+          animationDuration="1s" // String: Length of animation
+          responsive // Boolean: Make SVG adapt to parent size
         />
         {/* <SingleSlider
             min={0}
@@ -46,7 +46,7 @@ function Statistics({
             : Math.floor((measurements.total * 100) / measurements.goal)}
           progressColor="#8EE289"
           textStyle={style}
-          textColor={colors.grayDark}
+          textColor="#25bb32"
         />
         <h3>{measurements.name}</h3>
       </div>
@@ -56,7 +56,7 @@ function Statistics({
             : Math.floor((minutes.total * 100) / (subjects.total * 60))}
           progressColor="#8EE289"
           textStyle={style}
-          textColor={colors.grayDark}
+          textColor="#25bb32"
         />
         <h3>{minutes.name}</h3>
       </div>
