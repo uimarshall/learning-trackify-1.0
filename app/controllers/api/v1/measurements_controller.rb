@@ -13,13 +13,12 @@ module Api
       def my_measurements
         measurements = current_user.measurements.date_m(params[:date] || '')
         # render json: MeasurementSerializer.new(measurements).serialized_json
-         json_response(measurements)
+        json_response(measurements)
       end
 
       # Show single measurement
 
       def show
-        # render json: MeasurementSerializer.new(@measurement).serialized_json
         json_response(@measurement)
       end
 
@@ -29,27 +28,12 @@ module Api
         params['user_id'] = current_user.id
         measure = @subject.measurements.create!(params)
         json_response(measure, :created)
-        # measure = @course.measurements.new(params)
-        # if measure.save
-        #   render json: MeasurementSerializer.new(measure).serialized_json
-
-        # else
-        #   render json: { error: measure.errors.messages }, status: 422
-
-        end
         render json: MeasurementSerializer.new(measure, :created).serialized_json
       end
 
       def update
-         @measurement.update(measurement_params)
-         head :no_content
-        # if @measurement.update(measurement_params)
-        #   render json: MeasurementSerializer.new(@measurement).serialized_json
-
-        # else
-        #   render json: { error: @measurement.errors.messages }, status: 422
-
-        # end
+        @measurement.update(measurement_params)
+        head :no_content
       end
 
       def destroy

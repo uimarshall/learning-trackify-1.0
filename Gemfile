@@ -21,7 +21,6 @@ gem 'jwt'
 # Use faker for fake data
 gem 'faker', git: 'https://github.com/stympy/faker'
 
-
 # Use figaro to set ENV variables
 # gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 gem 'figaro', '~> 1.2'
