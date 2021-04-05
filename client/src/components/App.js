@@ -8,7 +8,7 @@ import Routes from './router/routes';
 function App() {
   return (
     <Router>
-      <div className="container">
+      <div className="">
         <Header />
         <Routes />
         <Menu />

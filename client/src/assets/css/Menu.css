@@ -1,0 +1,48 @@
+.footer {
+  width: 100%;
+  background-color: #020102;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer ul {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+}
+
+.footer ul li {
+  width: 25%;
+}
+
+.footer ul li.active {
+  background-color: var(--clr-primary-2);
+}
+
+.footer ul a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--clr-grey-4);
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+.footer ul li a {
+  color: white;
+}
+
+.footer svg {
+  font-size: 1.5rem;
+}
+
+.footer span {
+  font-size: 0.8rem;
+  font-weight: bold;
+}

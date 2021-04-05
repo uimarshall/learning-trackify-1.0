@@ -5,6 +5,7 @@ import { Link, withRouter, useLocation } from 'react-router-dom';
 import { FaSignOutAlt, FaBook, FaStopwatch } from 'react-icons/fa';
 import { logout } from '../actions';
 import Storage from '../helpers/localStorage';
+import '../assets/css/Menu.css';
 
 function Menu({ isLogged, logout }) {
   const { pathname } = useLocation();

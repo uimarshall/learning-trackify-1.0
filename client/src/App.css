@@ -1,4 +1,5 @@
 
 .App {
-  border: none;
+  display: grid;
+  grid-auto-flow: column;
 }
