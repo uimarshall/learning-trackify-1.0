@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link, withRouter, useLocation } from 'react-router-dom';
-import { FaPlus } from 'react-icons/fa';
+import { FaPlus, FaBookReader, FaCheckCircle } from 'react-icons/fa';
 
 function Header({ isLogged }) {
   const { pathname } = useLocation();
@@ -15,7 +15,15 @@ function Header({ isLogged }) {
   );
   return !isLogged ? '' : (
     <div className="header">
-      <h1> Keep Learning! </h1>
+
+      <h1>
+        {' '}
+        <FaBookReader />
+        {' '}
+        Track Your Learning!
+        {' '}
+        <FaCheckCircle />
+      </h1>
       {addMeasure}
     </div>
   );
