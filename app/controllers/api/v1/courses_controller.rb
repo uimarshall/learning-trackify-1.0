@@ -2,18 +2,18 @@ module Api
   module V1
     class CoursesController < ApplicationController
       before_action :set_course, only: %i[show update destroy]
-      skip_before_action :verify_authenticity_token
+      # skip_before_action :verify_authenticity_token
 
       def index
         @courses = Course.all
-        # json_response(@courses)
-        render json: CourseSerializer.new(@courses).serialized_json
+        json_response(@courses)
+        # render json: CourseSerializer.new(@courses).serialized_json
       end
 
       def my_courses
         @courses = current_user.courses
-        # json_response(@courses)
-        render json: CourseSerializer.new(@courses).serialized_json
+        json_response(@courses)
+        # render json: CourseSerializer.new(@courses).serialized_json
       end
 
       def create

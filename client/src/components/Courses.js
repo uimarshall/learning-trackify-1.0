@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Subject from './Course';
 import { subjectsThunk, subjectRegisterThunk, mySubjectsThunk } from '../reduxThunks/courses';
+import '../assets/css/Courses.css';
 
 function Subjects({
   subjects, mySubjects, fetchMySubjects,
