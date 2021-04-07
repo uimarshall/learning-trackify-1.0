@@ -15,58 +15,66 @@
 
 .home-circles {
   padding: 10px;
-  display: flex;}
- .home-circles div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 33%;
-   
-  }
+  display: flex;
+}
 
-  .home-circles div  h3 {
-      color: var(--clr-grey-7);
-    }
+.home-circles div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+}
 
+.home-circles div h3 {
+  color: var(--clr-grey-7);
+}
 
 .home-subjects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 5px;}
- .home-subjects a {
-    text-decoration: none;
-  }
- .home-subjects .home-subject {
-    width: 45%;
-    display: flex;
-    margin-top: 15px;}
-     .home-subjects .home-subject > div {
-      display: flex;
-      padding: 10px;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-      color: var(--clr-primary-2);
-    }
-    .home-subjects .home-subject > div:nth-child(1){
-      font-size: 2rem;
-    }
-    .home-subjects .home-subject > div:nth-child(2){
-      color: var(--clr-dark-grey);
-      flex-direction: column;
-    }
-   .home-subjects .home-subject span {
-      margin-left: 5px;
-      font-size: 0.7rem;
-    }
-  .home-subjects .home-subject .home-subject-text {
-      display: inline;
-      
-    }
+  margin-top: 5px;
+}
 
-.home-subject-text span:nth-child(1){
-        color: var(--clr-grey-5);
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
+.home-subjects a {
+  text-decoration: none;
+}
+
+.home-subjects .home-subject {
+  width: 45%;
+  display: flex;
+  margin-top: 15px;
+}
+
+.home-subjects .home-subject > div {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: var(--clr-primary-2);
+}
+
+.home-subjects .home-subject > div:nth-child(1) {
+  font-size: 2rem;
+}
+
+.home-subjects .home-subject > div:nth-child(2) {
+  color: var(--clr-dark-grey);
+  flex-direction: column;
+}
+
+.home-subjects .home-subject span {
+  margin-left: 5px;
+  font-size: 0.7rem;
+}
+
+.home-subjects .home-subject .home-subject-text {
+  display: inline;
+}
+
+.home-subject-text span:nth-child(1) {
+  color: var(--clr-grey-5);
+  font-size: 1.2rem;
+  font-weight: bold;
+}

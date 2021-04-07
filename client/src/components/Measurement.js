@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Circle from 'react-circle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Time from '../helpers/Time';
+import '../assets/css/Measurement.css';
 
 export default function Measurement({
   measurement: {
