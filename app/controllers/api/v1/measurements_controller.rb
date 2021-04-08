@@ -23,12 +23,12 @@ module Api
       end
 
       def create
-        p params
+        # p params
         params = measurement_params
         params['user_id'] = current_user.id
         measure = @subject.measurements.create!(params)
         json_response(measure, :created)
-        render json: MeasurementSerializer.new(measure, :created).serialized_json
+        # render json: MeasurementSerializer.new(measure, :created).serialized_json
       end
 
       def update
