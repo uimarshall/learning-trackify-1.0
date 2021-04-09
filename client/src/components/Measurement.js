@@ -8,7 +8,7 @@ import '../assets/css/Measurement.css';
 
 export default function Measurement({
   measurement: {
-    units, date_m: dateM, id, subject_id: subjectId,
+    units, date_m: dateM, id, course_id: subjectId,
   },
 }) {
   const style = {
@@ -45,6 +45,6 @@ Measurement.propTypes = {
     id: PropTypes.number,
     units: PropTypes.number,
     date_m: PropTypes.string,
-    subject_id: PropTypes.number,
+    course_id: PropTypes.number,
   }).isRequired,
 };

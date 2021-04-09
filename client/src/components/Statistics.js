@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -66,9 +67,9 @@ function Statistics({
 
 Statistics.propTypes = {
   statistics: PropTypes.shape({
-    minutes: PropTypes.arrayOf(PropTypes.object),
-    subjects: PropTypes.instanceOf(PropTypes.object),
-    measurements: PropTypes.instanceOf(PropTypes.object),
+    minutes: PropTypes.object,
+    subjects: PropTypes.object,
+    measurements: PropTypes.object,
     loadingSubjects: PropTypes.bool,
     loadingMeasurements: PropTypes.bool,
   }).isRequired,

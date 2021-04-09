@@ -34,7 +34,7 @@ const defaultProps = {
       id: null,
       units: 0,
       date_m: Time.today(),
-      subject_id: null,
+      course_id: null,
     },
     message: '',
     loading: false,

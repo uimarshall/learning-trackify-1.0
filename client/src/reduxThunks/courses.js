@@ -62,7 +62,7 @@ export const subjectRegisterThunk = (subject) => () => axios
   .post(
     '/api/v1/register_course',
     {
-      subject_id: subject,
+      course_id: subject,
     },
     {
       headers: {

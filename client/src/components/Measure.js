@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -53,12 +54,12 @@ class Measure extends Component {
   }
 
   handleDelete() {
-    const { measure: { id, subject_id: subjectId }, deleteMeasure, history } = this.props;
+    const { measure: { id, course_id: subjectId }, deleteMeasure, history } = this.props;
     deleteMeasure({
       id,
       subjectId,
     }).then(() => {
-      history.push(`/my-subject/${subjectId}`);
+      history.push(`/my-course/${subjectId}`);
     });
   }
 
@@ -71,7 +72,7 @@ class Measure extends Component {
   handleSubmit() {
     const { subjectId, value, date: dateState } = this.state;
     const {
-      measure: { id, subject_id: subjectIdProps },
+      measure: { id, course_id: subjectIdProps },
       history, saveMeasure, updateMeasure, subjects,
     } = this.props;
 
@@ -82,7 +83,7 @@ class Measure extends Component {
         units: value,
         dateM: dateState,
       }).then(() => {
-        history.push(`/my-subject/${subjectIdProps}`);
+        history.push(`/my-course/${subjectIdProps}`);
       });
     } else {
       const subj = subjectId || subjects[0].id;
@@ -92,13 +93,13 @@ class Measure extends Component {
         subjectId: subj,
         dateM: dateState,
       }).then(() => {
-        history.push(`/my-subject/${subj}`);
+        history.push(`/my-course/${subj}`);
       });
     }
   }
 
   render() {
-    const { measure: { id: measureId, subject_id: subjectIdProps, units }, subjects } = this.props;
+    const { measure: { id: measureId, course_id: subjectIdProps, units }, subjects } = this.props;
     const { subjectId, date } = this.state;
     const measureDate = measureId ? '' : (
       <div className="row measure-date">
@@ -145,13 +146,13 @@ Measure.propTypes = {
   measure: PropTypes.shape({
     id: PropTypes.number,
     date_m: PropTypes.string,
-    subject_id: PropTypes.number,
+    course_id: PropTypes.number,
     units: PropTypes.number,
   }).isRequired,
   subjects: PropTypes.arrayOf(PropTypes.object).isRequired,
   match: PropTypes.shape({
     path: PropTypes.string,
-    params: PropTypes.instanceOf(PropTypes.object),
+    params: PropTypes.object,
   }).isRequired,
   newMeasure: PropTypes.func.isRequired,
   fetchSubjects: PropTypes.func.isRequired,
