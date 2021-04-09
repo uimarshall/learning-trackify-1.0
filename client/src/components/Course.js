@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Subject({ subject: { image, name, id }, handleClick, mySubjects }) {
   return (
     <div className="subject-list-item bg-white">
       <div>
-        {image.split(' ')}
+        <FontAwesomeIcon icon={image.split(' ')} />
       </div>
       <div>
         <div><span>{name}</span></div>

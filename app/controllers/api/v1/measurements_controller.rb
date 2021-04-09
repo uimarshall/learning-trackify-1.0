@@ -23,10 +23,10 @@ module Api
       end
 
       def create
-        # p params
+        p params
         params = measurement_params
         params['user_id'] = current_user.id
-        measure = @subject.measurements.create!(params)
+        measure = @course.measurements.create!(params)
         json_response(measure, :created)
         # render json: MeasurementSerializer.new(measure, :created).serialized_json
       end
@@ -37,18 +37,18 @@ module Api
       end
 
       def destroy
-        if @measurement.destroy
-          head :no_content
-        else
-          render json: { error: @measurement.errors.messages }, status: 422
+        @measurement.destroy
+        head :no_content
+        # else
+        #   render json: { error: @measurement.errors.messages }, status: 422
 
-        end
+        # end
       end
 
       private
 
       def measurement_params
-        params.require(:measurement).permit(:units, :date_m)
+        params.permit(:units, :date_m)
       end
 
       def set_course

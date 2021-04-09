@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
+https://icons8.com/icon/set/aws/color
+
 * ...

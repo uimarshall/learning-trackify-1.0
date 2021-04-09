@@ -9,15 +9,18 @@
 user = User.create!(name: 'John', email: 'john@test.com', password: 'pass123', password_confirmation: 'pass123')
 
 courses = [
-  ['https://learning-trackify.s3.eu-west-3.amazonaws.com/ruby.png', 'Ruby', 'A good career course'],
-  ['https://learning-trackify.s3.eu-west-3.amazonaws.com/css3.png', 'CSS3', 'A better course'],
-  ['https://learning-trackify.s3.eu-west-3.amazonaws.com/react.png', 'React', 'A developmental course'],
-  ['https://learning-trackify.s3.eu-west-3.amazonaws.com/java.png', 'Java', 'Beginner course'],
-  ['https://learning-trackify.s3.eu-west-3.amazonaws.com/python-48.png', 'Python', 'Intermediate course'],
-  ['https://learning-trackify.s3.eu-west-3.amazonaws.com/redux.png', 'Redux', 'For advance learners'],
-  ['https://learning-trackify.s3.eu-west-3.amazonaws.com/javascript.png', 'JavaScript', 'For advance learners'],
-  ['https://learning-trackify.s3.eu-west-3.amazonaws.com/mongodb.png',  'Mongodb', 'A higher level course'],
-  ['https://learning-trackify.s3.eu-west-3.amazonaws.com/nodejs.png', 'NodeJs', 'For advance learners']
+  ['fab node-js', 'NodeJs', 'A good career course'],
+  ['fab css3', 'CSS3', 'A better course'],
+  ['fab react', 'React', 'A developmental course'],
+  ['fab java', 'Java', 'Beginner course'],
+  ['fab python', 'Python', 'Intermediate course'],
+  ['fab html5', 'HTML 5', 'For advance learners'],
+  ['fab js', 'JavaScript', 'For advance learners'],
+  ['fab database',  'Mongodb', 'A higher level course'],
+  ['fab trello', 'Project management', 'For advance learners'],
+  ['fab amazon', 'AWS', 'For advance learners'],
+  ['fab android', 'Mobile', 'For advance learners'],
+  
 ]
 courses.each do |x|
   user.courses << Course.create(name: x[1], desc: x[2], image: x[0])
