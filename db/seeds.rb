@@ -16,9 +16,8 @@ courses = [
   ['fab python', 'Python', 'Intermediate course'],
   ['fab html5', 'HTML 5', 'For advance learners'],
   ['fab js', 'JavaScript', 'For advance learners'],
-  ['fab database',  'Mongodb', 'A higher level course'],
   ['fab trello', 'Project management', 'For advance learners'],
-  ['fab amazon', 'AWS', 'For advance learners'],
+  ['fab amazon', 'AWS', 'A higher level course'],
   ['fab android', 'Mobile', 'For advance learners'],
   
 ]

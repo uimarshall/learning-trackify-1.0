@@ -23,13 +23,13 @@ module Api
       end
 
       def show
-        @course = Course.find_by(id: params[:id])
+        # @course = Course.find_by(id: params[:id])
         json_response(@course)
         # render json: CourseSerializer.new(@courses).serialized_json
       end
 
       def update
-        @course = Course.find_by(id: params[:id])
+        # @course = Course.find_by(id: params[:id])
         @course.update(course_params)
         head :no_content
       end
@@ -42,7 +42,7 @@ module Api
       private
 
       def course_params
-        params.require(:course).permit(:id, :name, :desc)
+        params.permit(:name, :desc)
       end
 
       def set_course
