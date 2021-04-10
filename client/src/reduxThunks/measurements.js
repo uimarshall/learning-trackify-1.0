@@ -7,11 +7,11 @@ import {
   myMeasurementsOk, myMeasurementsBad, myMeasurementsLoading,
 } from '../actions';
 
-export const deleteMeasureThunk = ({ id, courseId }) => (dispatch) => {
+export const deleteMeasureThunk = ({ id, subjectId }) => (dispatch) => {
   dispatch(measureLoading());
   return axios
     .delete(
-      `/api/v1/courses/${courseId}/measurements/${id}`,
+      `/api/v1/courses/${subjectId}/measurements/${id}`,
       {
         headers: {
           Authorization: `Bearer ${Storage.getToken()}`,
@@ -32,12 +32,12 @@ export const deleteMeasureThunk = ({ id, courseId }) => (dispatch) => {
 };
 
 export const updateMeasureThunk = ({
-  id, units, courseId, dateM,
+  id, units, subjectId, dateM,
 }) => (dispatch) => {
   dispatch(measureLoading());
   return axios
     .patch(
-      `/api/v1/courses/${courseId}/measurements/${id}`,
+      `/api/v1/courses/${subjectId}/measurements/${id}`,
       {
         units,
         date_m: dateM,
@@ -61,11 +61,11 @@ export const updateMeasureThunk = ({
     });
 };
 
-export const fetchMeasureThunk = ({ id, courseId }) => (dispatch) => {
+export const fetchMeasureThunk = ({ id, subjectId }) => (dispatch) => {
   dispatch(measureLoading());
   return axios
     .get(
-      `/api/v1/courses/${courseId}/measurements/${id}`,
+      `/api/v1/courses/${subjectId}/measurements/${id}`,
       {
         headers: {
           Authorization: `Bearer ${Storage.getToken()}`,
@@ -85,11 +85,11 @@ export const fetchMeasureThunk = ({ id, courseId }) => (dispatch) => {
     });
 };
 
-export const measureThunk = ({ units, courseId, dateM }) => (dispatch) => {
+export const measureThunk = ({ units, subjectId, dateM }) => (dispatch) => {
   dispatch(measureLoading());
   return axios
     .post(
-      `/api/v1/courses/${courseId}/measurements`,
+      `/api/v1/courses/${subjectId}/measurements`,
       {
         units,
         date_m: dateM,
@@ -113,12 +113,12 @@ export const measureThunk = ({ units, courseId, dateM }) => (dispatch) => {
     });
 };
 
-export const measurementsThunk = (courseId) => (dispatch) => {
+export const measurementsThunk = (subjectId) => (dispatch) => {
   dispatch(myMeasurementsLoading());
   dispatch(statisticsLoadingMeasurements());
   axios
     .get(
-      `/api/v1/courses/${courseId}/measurements`,
+      `/api/v1/courses/${subjectId}/measurements`,
       {
         headers: {
           Authorization: `Bearer ${Storage.getToken()}`,
