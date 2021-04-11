@@ -76,7 +76,7 @@ Run `rake db:seed` to migrate your local database.
 Run `rails s -p 3001` to start the rails server.
 
 **Step 9**<br>
-Run `rails s -p 3001` to start the rails server.
+Run `yarn --cwd client start` to start the react frontend.
 
 **Step 10**<br>
 Run the app in the development mode.\
