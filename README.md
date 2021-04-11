@@ -53,22 +53,31 @@ To get a local copy up and running follow these steps:
 **Step 1**<br>
 Navigate through the local folder where you want to clone the repository and run
 `git clone https://github.com/uimarshall/learning-trackify-1.0`.<br>
+
 **Step 2**<br>
 Run `cd learning-trackify-1.0`.<br>
+
 **Step 3**<br>
 Run `bundle install` to install the gems from the `Gemfile`.<br>
+
 **Step 4**<br>
 Run `yarn install` to install the packages from the `package.json` file.<br>
+
 **Step 5**<br>
 Run `rake db:create` to create your local database.
+
 **Step 6**<br>
 Run `rake db:migrate` to migrate your local database.
+
 **Step 7**<br>
 Run `rake db:seed` to migrate your local database.
+
 **Step 8**<br>
 Run `rails s -p 3001` to start the rails server.
+
 **Step 9**<br>
 Run `rails s -p 3001` to start the rails server.
+
 **Step 10**<br>
 Run the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
