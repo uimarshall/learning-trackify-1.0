@@ -37,7 +37,7 @@
     "lint": "npx eslint .",
     "stylelintfix": "npx stylelint --fix \"**/*.{css,scss}\"",
     "eslintfix": "npx eslint --fix .",
-    "lintfix": "npm run stylelintfix && npm run eslintfix"
+    "lintfix": "npm run stylelintfix"
   },
   "eslintConfig": {
     "extends": [
