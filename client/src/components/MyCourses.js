@@ -15,8 +15,8 @@ function MySubjects({
   }, [date]);
 
   return (
-    <div className="row">
-      <div className="home-subjects">
+    <div className="container">
+      <div className="home-subjects row">
         {subjects.map((x) => (
           <MySubject
             key={x.id}

@@ -11,9 +11,9 @@ export default function Home() {
   const { date } = useParams();
   const dateToday = date || Time.today();
   return (
-    <div className="bg-gray full-screen row">
-      <div className="bg-white mx-auto">
-        <div className="d-flex justify-content-around mt-2">
+    <div className="bg-gray full-screen">
+      <div className="mx-auto row">
+        <div className="col-12 d-flex justify-content-around mt-2">
           <Link to={`/home/${Time.yesterday(dateToday)}`}>
             <FaAngleLeft />
           </Link>
@@ -22,9 +22,16 @@ export default function Home() {
             <FaAngleRight />
           </Link>
         </div>
-        <Statistics />
+        <div className="col-12">
+            <Statistics />
+        </div>
+      
+        <div className="col-12">
+           <MySubjects date={dateToday} />
+        </div>
+       
       </div>
-      <MySubjects date={dateToday} />
+     
     </div>
   );
 }

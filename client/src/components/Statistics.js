@@ -28,7 +28,6 @@ function Statistics({
           textColor="#25bb32"
           animate // Boolean: Animated/Static progress
           animationDuration="1s" // String: Length of animation
-          responsive // Boolean: Make SVG adapt to parent size
         />
         {/* <SingleSlider
             min={0}
