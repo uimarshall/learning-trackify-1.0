@@ -133,7 +133,7 @@ class Measure extends Component {
         <div className="row buttons last-div mb-5">
           {
                 !measureId ? ''
-                  : (<button type="button" className="button-red" onClick={this.handleDelete}>Delete</button>)
+                  : (<button type="button" className="btn-orange" onClick={this.handleDelete}>Delete</button>)
               }
           <button type="button" className="btn" onClick={this.handleSubmit}>Save</button>
         </div>

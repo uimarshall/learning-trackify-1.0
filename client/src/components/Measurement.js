@@ -17,7 +17,7 @@ export default function Measurement({
   let progress = Math.floor((units * 100) / 60);
   progress = progress < 100 ? progress : 100;
   return (
-    <Link to={`/subjects/${subjectId}/measurements/${id}`} className="subject-list-item bg-white">
+    <Link to={`/courses/${subjectId}/measurements/${id}`} className="subject-list-item bg-white">
       <div className="measurement-circle">
         <Circle
           responsive
