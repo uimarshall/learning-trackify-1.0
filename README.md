@@ -6,6 +6,10 @@
 
 Final Capstone Project of the Microverse Technical Curriculum Program, this project is a fullstack application consists in a frontend Single Page Application built with React/Redux, the application consumes an API built with Ruby On rails on the backend. The application is serves to help users track their learning progress daily; It helps users to determine which subject ot learn more and also motivates them to learn more when they see their progress as it is being tracked.
 
+> ​
+> ![screenshot](public/login.png)
+>
+
 ## Link to Live Demo:
 
 [Learning Trackify](https://frozen-wildwood-96033.herokuapp.com/login)
