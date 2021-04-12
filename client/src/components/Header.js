@@ -14,7 +14,7 @@ function Header({ isLogged }) {
     </div>
   );
   return !isLogged ? '' : (
-    <div className="header">
+    <div className="header" data-testid="measure-container">
 
       <h1>
         {' '}
