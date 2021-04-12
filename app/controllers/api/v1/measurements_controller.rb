@@ -6,13 +6,11 @@ module Api
       def index
         @measurements = Measurement
           .where(course_id: @course.id, user_id: current_user.id).last_week.order(id: :desc)
-        # render json: MeasurementSerializer.new(@measurements).serialized_json
         json_response(@measurements)
       end
 
       def my_measurements
         measurements = current_user.measurements.date_m(params[:date] || '')
-        # render json: MeasurementSerializer.new(measurements).serialized_json
         json_response(measurements)
       end
 
@@ -28,7 +26,6 @@ module Api
         params['user_id'] = current_user.id
         measure = @course.measurements.create!(params)
         json_response(measure, :created)
-        # render json: MeasurementSerializer.new(measure, :created).serialized_json
       end
 
       def update
@@ -39,10 +36,6 @@ module Api
       def destroy
         @measurement.destroy
         head :no_content
-        # else
-        #   render json: { error: @measurement.errors.messages }, status: 422
-
-        # end
       end
 
       private

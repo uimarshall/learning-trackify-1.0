@@ -2,7 +2,6 @@ module Api
   module V1
     class AuthenticationController < ApplicationController
       skip_before_action :authorize_request, only: :authenticate
-      # skip_before_action :verify_authenticity_token
       # return auth token once user is authenticated
       def authenticate
         auth_token =

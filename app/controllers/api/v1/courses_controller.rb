@@ -7,29 +7,23 @@ module Api
       def index
         @courses = Course.all
         json_response(@courses)
-        # render json: CourseSerializer.new(@courses).serialized_json
       end
 
       def my_courses
         @courses = current_user.courses
         json_response(@courses)
-        # render json: CourseSerializer.new(@courses).serialized_json
       end
 
       def create
         @course = Course.create!(course_params)
         json_response(@course, :created)
-        # render json: CourseSerializer.new(@courses).serialized_json
       end
 
       def show
-        # @course = Course.find_by(id: params[:id])
         json_response(@course)
-        # render json: CourseSerializer.new(@courses).serialized_json
       end
 
       def update
-        # @course = Course.find_by(id: params[:id])
         @course.update(course_params)
         head :no_content
       end
