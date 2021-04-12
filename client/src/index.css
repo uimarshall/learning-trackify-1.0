@@ -238,22 +238,26 @@ p {
 }
 
 @media screen and (min-width: 320px) {
-  .measurement-wrapper .row, .course-wrapper {
-   margin: 0 auto !important;
+  .measurement-wrapper .row,
+  .course-wrapper {
+    margin: 0 auto !important;
   }
-}
-@media screen and (min-width: 992px) {
-  .measurement-wrapper .row, .course-wrapper {
-   margin: 0 auto;
-  }
-}
-@media screen and (max-width: 425px) {
-  .measurement-wrapper .row, .course-wrapper {
-   margin: 0 auto;
-  }
- .course-wrapper .text-sm { 
-  font-size: 0.5rem;
-  
-}
 }
 
+@media screen and (min-width: 992px) {
+  .measurement-wrapper .row,
+  .course-wrapper {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .measurement-wrapper .row,
+  .course-wrapper {
+    margin: 0 auto;
+  }
+
+  .course-wrapper .text-sm {
+    font-size: 0.5rem;
+  }
+}

@@ -108,7 +108,7 @@ class Measure extends Component {
       </div>
     );
     return (
-      <div className="bg-gray new-measure">
+      <div className="bg-light new-measure">
         {measureDate}
         <div className="row measure-date">
           {
@@ -126,15 +126,16 @@ class Measure extends Component {
             value={units}
             size={300}
             onChange={this.handleChange}
+             textColor="#102a42"
             showTooltip
           />
         </div>
-        <div className="row buttons last-div">
+        <div className="row buttons last-div mb-5">
           {
                 !measureId ? ''
                   : (<button type="button" className="button-red" onClick={this.handleDelete}>Delete</button>)
               }
-          <button type="button" className="button-green" onClick={this.handleSubmit}>Save</button>
+          <button type="button" className="btn" onClick={this.handleSubmit}>Save</button>
         </div>
       </div>
     );
