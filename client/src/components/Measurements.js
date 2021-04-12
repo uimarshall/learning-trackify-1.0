@@ -24,26 +24,34 @@ function Measurements({ measurements, fetchMeasurements }) {
     </div>
   );
   return (
-    <div className="bg-gray full-screen">
+    <div className="bg-gray full-screen mx-auto measurement-wrapper">
       <div className="row">
-        <div className="measurements-title"><span>Today</span></div>
-        <div className="subjects-list">
-          {today.length > 0
-            ? today.map((x) => <Measurement key={x.id} measurement={x} />)
-            : noRecords}
+        <div className="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+          <div className="measurements-title"><span>Today</span></div>
+          <div className="subjects-list text-black-50">
+            {today.length > 0
+              ? today.map((x) => <Measurement key={x.id} measurement={x} />)
+              : noRecords}
+          </div>
         </div>
-        <div className="measurements-title"><span>Yesterday</span></div>
-        <div className="subjects-list">
-          {yesterday.length > 0
-            ? yesterday.map((x) => <Measurement key={x.id} measurement={x} />)
-            : noRecords}
+        <div className="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+          <div className="measurements-title"><span>Yesterday</span></div>
+          <div className="subjects-list text-black-50">
+            {yesterday.length > 0
+              ? yesterday.map((x) => <Measurement key={x.id} measurement={x} />)
+              : noRecords}
+          </div>
         </div>
-        <div className="measurements-title"><span>Last week</span></div>
-        <div className="subjects-list last-div">
-          {lastWeek.length > 0
-            ? lastWeek.map((x) => <Measurement key={x.id} measurement={x} />)
-            : noRecords}
+        
+        <div className="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+          <div className="measurements-title"><span>Last week</span></div>
+          <div className="subjects-list last-div text-black-50">
+            {lastWeek.length > 0
+              ? lastWeek.map((x) => <Measurement key={x.id} measurement={x} />)
+              : noRecords}
+          </div>
         </div>
+        
       </div>
     </div>
   );
