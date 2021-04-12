@@ -24,9 +24,9 @@ function Subjects({
   const mySubjectsIds = mySubjects.map((x) => x.id);
 
   return (
-    <div className="bg-gray full-screen">
+    <div className="bg-gray full-screen course-wrapper">
       <div className="row">
-        <div className="subjects-list">
+        <div className="subjects-list col-sm-12 col-md-8 offset-md-2">
           {subjects.map((x) => (
             <Subject key={x.id} handleClick={handleClick} subject={x} mySubjects={mySubjectsIds} />
           ))}

@@ -8,7 +8,7 @@ export default function Subject({ subject: { image, name, id }, handleClick, myS
       <div>
         <FontAwesomeIcon icon={image.split(' ')} />
       </div>
-      <div>
+      <div className="text-sm">
         <div><span>{name}</span></div>
       </div>
       {
@@ -16,7 +16,7 @@ export default function Subject({ subject: { image, name, id }, handleClick, myS
           <div style={{ marginLeft: 'auto' }}>
             <button
               type="button"
-              className="button-green"
+              className="btn"
               onClick={() => handleClick(id)}
             >
               Register
