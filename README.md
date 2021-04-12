@@ -12,7 +12,7 @@ Final Capstone Project of the Microverse Technical Curriculum Program, this proj
 
 ## Link to Live Demo:
 
-[Learning Trackify](https://frozen-wildwood-96033.herokuapp.com/login)
+[Learning Trackify](https://frozen-wildwood-96033.herokuapp.com)
 
 ### Project Specification
 
