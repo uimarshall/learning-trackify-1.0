@@ -84,5 +84,5 @@ production:
   <<: *default
   database: learning_trackify_1_0_production
   # username: learning_trackify_1_0
-  # username: <%= ENV['LEARNING_TRACKIFY_1_0_DATABASE_USER'] %>
-  # password: <%= ENV['LEARNING_TRACKIFY_1_0_DATABASE_PASSWORD'] %>
+  username: <%= ENV['LEARNING_TRACKIFY_1_0_DATABASE_USER'] %>
+  password: <%= ENV['LEARNING_TRACKIFY_1_0_DATABASE_PASSWORD'] %>
