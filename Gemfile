@@ -49,6 +49,10 @@ group :development do
   gem 'hirb', '~> 0.7.3'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails', '~> 6.1'
