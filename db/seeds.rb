@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create!(name: 'Jobb', email: 'jobb@test.com', password: 'pass123', password_confirmation: 'pass123')
+user = User.create!(name: 'Jota', email: 'jot@test.com', password: 'pass123', password_confirmation: 'pass123')
 
 courses = [
   ['fab node-js', 'NodeJs', 'A good career course'],
