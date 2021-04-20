@@ -17,7 +17,7 @@ describe('MySubjects Component', () => {
       <MySubjects
       subjects = {jest.fn()}
       fetchSubjects = {jest.fn()}
-      date = {jest.fn()}
+      date = "2-5-2021"
       measurements = {jest.fn()}
       fetchMeasurements = {jest.fn()}
       
