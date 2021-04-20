@@ -29,21 +29,3 @@ describe('Courses Component', () => {
 
 
 
-// jest.mock('../../components/Course', () => 
-//   (props) => <div data-test-id="fetchCourse" {...props} />);
-
-// Course
-// expect(getByTestId("FetchNextPageButton")).toHaveAttribute("path", "viewer.news");
-// expect(getByTestId("FetchNextPageButton")).toHaveAttribute("path", "viewer.news");
-
-// ... in your test
-// expect(Course).toHaveBeenCalledWith(props, context)
-
-// describe('Home Component', () => {
-//   test('renders Home component without crashing', () => {
-//     const nonExist = 'No such text';
-//     render(<Provider store={store}><Router><Home /></Router></Provider>);
-
-//     expect(screen.queryByText(nonExist)).toBeNull();
-//   });
-// });

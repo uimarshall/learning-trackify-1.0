@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Circle from 'react-circle';
 // import {SingleSlider} from 'react-slider-kit';
-// import { colors } from '../data/styles';
 
 function Statistics({
   statistics: {
