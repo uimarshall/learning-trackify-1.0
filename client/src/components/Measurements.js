@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import { useParams } from 'react-router';
 import { withRouter, useParams } from 'react-router-dom';
 import Time from '../helpers/Time';
 import { measurementsThunk } from '../reduxThunks/measurements';
