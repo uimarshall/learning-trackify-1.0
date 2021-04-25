@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyCourse Component should take a snapshot for MyCourse Component 1`] = `
+<div
+  id="MyCourse"
+>
+  MyCourse
+</div>
+`;

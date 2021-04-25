@@ -1,0 +1,15 @@
+{
+  "name": "learning-trackify-1.0",
+  "license": "MIT",
+  "engines": {
+    "node": "10.17.0",
+    "npm": "6.11.3",
+    "yarn": "1.22.4"
+  },
+  "scripts": {
+    "build": "cd client && yarn install && yarn build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy && echo 'Client built!'"
+  },
+  "devDependencies": {}
+}
